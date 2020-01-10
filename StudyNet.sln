@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "简易计算器", "简易�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "商场收银", "商场收银\商场收银.csproj", "{3D19EFAE-34A8-483D-87E8-012AC33737BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "策略简述", "策略简述\策略简述.csproj", "{268E61F6-8536-45D7-98B3-772552FF1D71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "策略简述", "策略简述\策略简述.csproj", "{268E61F6-8536-45D7-98B3-772552FF1D71}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

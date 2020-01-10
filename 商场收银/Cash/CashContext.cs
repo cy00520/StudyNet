@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Reflection;
 
 namespace 商场收银.Cash
 {
@@ -14,6 +15,7 @@ namespace 商场收银.Cash
         private readonly CashSuper _cashSuper;
         public CashContext(string style)
         {
+
             switch (style)
             {
                 case "正常收费":

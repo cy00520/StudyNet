@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ConsoleApp3
+namespace 简易计算器
 {
     class Program
     {
@@ -11,12 +11,13 @@ namespace ConsoleApp3
             {
 
                 Console.WriteLine("请输入第一个数");
-                var NumberA = Convert.ToDouble(Console.ReadLine());
-                Console.WriteLine("输入+-*/|0,1,2,3");
+                var NumberOne = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine("输入+-*/0,1,2,3");
                 var oper = OperationFactory.CreateOperation((OperationFactory.OperationStr)Convert.ToInt32(Console.ReadLine()));
-                oper.NumberA = NumberA;
+                oper.NumberA = NumberOne;
                 Console.WriteLine("请输入第二个数");
-                oper.NumberB = Convert.ToDouble(Console.ReadLine());
+                var NumberTwo = Convert.ToDouble(Console.ReadLine());
+                oper.NumberB = NumberTwo;
 
                 var Result = oper.GetResult();
 
