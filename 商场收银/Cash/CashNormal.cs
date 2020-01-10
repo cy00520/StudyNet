@@ -9,9 +9,9 @@ namespace 商场收银.Cash
     /// <summary>
     /// 实现正常收费接口
     /// </summary>
-    class CashNormal : ICashSuper
+    class CashNormal : CashSuper
     {
-        public double AcceptCash(double money)
+        public override double AcceptCash(double money)
         {
             return money;
         }

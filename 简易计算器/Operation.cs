@@ -13,6 +13,7 @@ namespace ConsoleApp3
         /// <returns></returns>
         public static Operation CreateOperation(OperationStr operationStr)
         {
+
             Operation oper = null;
             switch (operationStr)
             {
@@ -41,50 +42,51 @@ namespace ConsoleApp3
             Ride,
             Except
         }
+    }
 
-        /// <summary>
-        /// 加法实现类
-        /// </summary>
-        class OperationPlus : Operation
+
+    /// <summary>
+    /// 加法实现类
+    /// </summary>
+    class OperationPlus : Operation
+    {
+        public override double GetResult()
         {
-            public override double GetResult()
-            {
-                return NumberA + NumberB;
-            }
+            return NumberA + NumberB;
         }
-        /// <summary>
-        /// 减法实现类
-        /// </summary>
-        class OperationReduce : Operation
+    }
+    /// <summary>
+    /// 减法实现类
+    /// </summary>
+    class OperationReduce : Operation
+    {
+        public override double GetResult()
         {
-            public override double GetResult()
-            {
-                return NumberA - NumberB;
-            }
+            return NumberA - NumberB;
         }
-        /// <summary>
-        /// 乘法实现类
-        /// </summary>
-        class OperationRide : Operation
+    }
+    /// <summary>
+    /// 乘法实现类
+    /// </summary>
+    class OperationRide : Operation
+    {
+        public override double GetResult()
         {
-            public override double GetResult()
-            {
-                return NumberA * NumberB;
-            }
+            return NumberA * NumberB;
         }
-        /// <summary>
-        /// 除法实现类
-        /// </summary>
-        class OperationExcept : Operation
+    }
+    /// <summary>
+    /// 除法实现类
+    /// </summary>
+    class OperationExcept : Operation
+    {
+        public override double GetResult()
         {
-            public override double GetResult()
+            if (NumberB == 0)
             {
-                if (NumberB == 0)
-                {
-                    throw new Exception("除数不能等于0");
-                }
-                return NumberA / NumberB;
+                throw new Exception("除数不能等于0");
             }
+            return NumberA / NumberB;
         }
     }
 
@@ -95,7 +97,6 @@ namespace ConsoleApp3
     {
         public double NumberA { get; set; }
         public double NumberB { get; set; }
-
         public abstract double GetResult();
     }
 }

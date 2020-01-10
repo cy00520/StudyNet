@@ -9,7 +9,7 @@ namespace 商场收银.Cash
     /// <summary>
     /// 实现满减收费接口
     /// </summary>
-    class CashReturn : ICashSuper
+    class CashReturn : CashSuper
     {
         readonly double _moneyCondition = 0.0d;
         readonly double _moneyReturn = 0.0d;
@@ -18,7 +18,7 @@ namespace 商场收银.Cash
             _moneyCondition = double.Parse(moneyCondition);
             _moneyReturn = double.Parse(moneyReturn);
         }
-        public double AcceptCash(double money)
+        public override double AcceptCash(double money)
         {
             var result = money;
             if (result >= _moneyCondition)

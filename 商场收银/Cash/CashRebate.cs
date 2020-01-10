@@ -9,7 +9,7 @@ namespace 商场收银.Cash
     /// <summary>
     /// 实现打折收费接口
     /// </summary>
-    class CashRebate : ICashSuper
+    class CashRebate : CashSuper
     {
         readonly double _moneyRebate = 1d;
         public CashRebate(string moneyRebate)
@@ -17,7 +17,7 @@ namespace 商场收银.Cash
             _moneyRebate = double.Parse(moneyRebate);
         }
 
-        public double AcceptCash(double money)
+        public override double AcceptCash(double money)
         {
             return money * _moneyRebate;
         }

@@ -9,8 +9,8 @@ namespace 商场收银.Cash
     /// <summary>
     /// 策略接口定义
     /// </summary>
-    interface ICashSuper
+    abstract class CashSuper
     {
-        double AcceptCash(double money);
+        public abstract double AcceptCash(double money);
     }
 }

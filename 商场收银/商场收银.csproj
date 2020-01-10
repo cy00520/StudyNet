@@ -51,7 +51,7 @@
     <Compile Include="Cash\CashNormal.cs" />
     <Compile Include="Cash\CashRebate.cs" />
     <Compile Include="Cash\CashReturn.cs" />
-    <Compile Include="Cash\ICashSuper.cs" />
+    <Compile Include="Cash\CashSuper.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

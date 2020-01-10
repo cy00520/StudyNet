@@ -11,7 +11,7 @@ namespace 商场收银.Cash
     /// </summary>
     public class CashContext
     {
-        private readonly ICashSuper _cashSuper;
+        private readonly CashSuper _cashSuper;
         public CashContext(string style)
         {
             switch (style)
