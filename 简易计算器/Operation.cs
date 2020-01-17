@@ -5,6 +5,38 @@ using System.Reflection;
 
 namespace 简易计算器
 {
+
+    public class OperationV3
+    {
+        public static double CreateOperation(double numberOne, double numberTwo, string operationType)
+        {
+            double operationResult;
+            switch (operationType)
+            {
+                case "+":
+                    operationResult = numberOne + numberTwo;
+                    break;
+                case "-":
+                    operationResult = numberOne - numberTwo;
+                    break;
+                case "*":
+                    operationResult = numberOne * numberTwo;
+                    break;
+                case "/":
+                    if (numberTwo <= 0)
+                    {
+                        throw new Exception("除数不能为0");
+                    }
+                    operationResult = numberOne / numberTwo;
+                    break;
+                default:
+                    throw new Exception("运算符错误");
+            }
+            return operationResult;
+        }
+    }
+
+
     public class OperationFactory
     {
         /// <summary>

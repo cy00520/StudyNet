@@ -160,7 +160,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "练习【策略模式】";
+            this.Text = "商场收银【策略模式】";
             this.ResumeLayout(false);
             this.PerformLayout();
 

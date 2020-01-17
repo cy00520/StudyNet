@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "商场收银", "商场收�
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "策略简述", "策略简述\策略简述.csproj", "{268E61F6-8536-45D7-98B3-772552FF1D71}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "反射", "反射\反射.csproj", "{97007F72-F525-417E-849C-B83B8CCBBC79}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{268E61F6-8536-45D7-98B3-772552FF1D71}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{268E61F6-8536-45D7-98B3-772552FF1D71}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{268E61F6-8536-45D7-98B3-772552FF1D71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97007F72-F525-417E-849C-B83B8CCBBC79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97007F72-F525-417E-849C-B83B8CCBBC79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97007F72-F525-417E-849C-B83B8CCBBC79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97007F72-F525-417E-849C-B83B8CCBBC79}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
