@@ -42,7 +42,7 @@ namespace 商场收银
             }
             catch (Exception ex)
             {
-                MessageBox.Show("输入正确数字");
+                MessageBox.Show("输入正确数字" + ex.Message);
             }
 
         }

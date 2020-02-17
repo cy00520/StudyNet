@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
-using System.Reflection;
+using System.Threading.Tasks;
 
-namespace 简易计算器
+namespace 简单工厂
 {
     public class OperationFactory
     {
@@ -12,39 +13,30 @@ namespace 简易计算器
         /// </summary>
         /// <param name="opertion"></param>
         /// <returns></returns>
-        public static Operation CreateOperation(OperationStr operationStr)
+        public static Operation CreateOperation(string operationStr)
         {
 
-            Operation oper = null;
+            Operation oper;
             switch (operationStr)
             {
-                case OperationStr.Plus:
+                case "+":
                     oper = new OperationPlus();
                     break;
-                case OperationStr.Reduce:
+                case "-":
                     oper = new OperationReduce();
                     break;
-                case OperationStr.Ride:
+                case "*":
                     oper = new OperationRide();
                     break;
-                case OperationStr.Except:
+                case "/":
                     oper = new OperationExcept();
                     break;
                 default:
-                    break;
+                    throw new Exception("请输入正确的+-*/");
             }
             return oper;
         }
-
-        public enum OperationStr
-        {
-            Plus,
-            Reduce,
-            Ride,
-            Except
-        }
     }
-
 
     /// <summary>
     /// 加法实现类
@@ -53,7 +45,7 @@ namespace 简易计算器
     {
         public override double GetResult()
         {
-            return NumberA + NumberB;
+            return NumberOne + NumberTwo;
         }
     }
     /// <summary>
@@ -63,7 +55,7 @@ namespace 简易计算器
     {
         public override double GetResult()
         {
-            return NumberA - NumberB;
+            return NumberOne - NumberTwo;
         }
     }
     /// <summary>
@@ -73,7 +65,7 @@ namespace 简易计算器
     {
         public override double GetResult()
         {
-            return NumberA * NumberB;
+            return NumberOne * NumberTwo;
         }
     }
     /// <summary>
@@ -83,21 +75,11 @@ namespace 简易计算器
     {
         public override double GetResult()
         {
-            if (NumberB == 0)
+            if (NumberTwo == 0)
             {
                 throw new Exception("除数不能等于0");
             }
-            return NumberA / NumberB;
+            return NumberOne / NumberTwo;
         }
-    }
-
-    /// <summary>
-    /// 算法抽象基类
-    /// </summary>
-    public abstract class Operation
-    {
-        public double NumberA { get; set; }
-        public double NumberB { get; set; }
-        public abstract double GetResult();
     }
 }
